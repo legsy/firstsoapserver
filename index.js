@@ -19,6 +19,10 @@ var service = {
 console.log("2");
 
 var expressServer = express();
+
+
+
+
 var server = expressServer.listen(51515, function () {
 	var soapServer = soap.listen(expressServer, '/SayHello', service, wsdl);
   	url = 'http://' + server.address().address + ':' + server.address().port;
